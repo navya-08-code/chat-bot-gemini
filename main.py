@@ -32,7 +32,7 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 # Display the chatbot's title on the page
-st.title("🤖 Gemini 2.5 Flash - ChatBot")
+st.title("🤖 Tipu - ChatBot")
 
 # Render conversation history inside native Streamlit chat blocks
 for message in st.session_state.chat_session.history:
@@ -40,7 +40,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input prompt from user
-user_prompt = st.chat_input("Ask Gemini...")
+user_prompt = st.chat_input("Ask Tipu...")
 if user_prompt:
     # Render user message
     st.chat_message("user").markdown(user_prompt)
